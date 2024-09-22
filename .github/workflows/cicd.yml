@@ -1,0 +1,8 @@
+name: "CICD for Python Application"
+on: workflow_dispatch
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting
+        run: pre-commit run --all-files
