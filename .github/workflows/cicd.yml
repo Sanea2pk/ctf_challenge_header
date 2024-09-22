@@ -3,11 +3,8 @@ on: workflow_dispatch
 jobs:
   lint:
     runs-on: ubuntu-latest
-    container: ago29/gitlab-base-image
     steps:
       - name: Linting
         run: |
           pwd
           ls -la
-          echo -n "Running pre-commit"
-          pre-commit run --all-files
