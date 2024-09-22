@@ -3,9 +3,9 @@ on: workflow_dispatch
 jobs:
   lint:
     runs-on: ubuntu-latest
+    container: ago29/gitlab-base-image
     steps:
       - name: Linting
         run: |
-          echo -n "Installing pre-commit"
-          pip install pre-commit
+          echo -n "Running pre-commit"
           pre-commit run --all-files
