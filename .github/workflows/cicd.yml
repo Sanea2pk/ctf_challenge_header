@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Linting
         run: |
-          apt install git
+          pwd
+          ls -la
           echo -n "Running pre-commit"
           pre-commit run --all-files
