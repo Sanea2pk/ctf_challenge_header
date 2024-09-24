@@ -11,5 +11,5 @@ jobs:
         run: |
           pwd
           ls -la
-          pre-commit -V
+          pre-commit install --install-hooks
           pre-commit run --all-files
