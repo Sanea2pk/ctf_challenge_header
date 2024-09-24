@@ -3,13 +3,10 @@ on: push
 jobs:
   main-cicd:
     runs-on: ubuntu-latest
-    container: ago29/gitlab-base-image
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
       - name: Linting
-        run: |
-          pwd
-          ls -la
-          pre-commit install --install-hooks
-          pre-commit run --all-files
+        uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files
