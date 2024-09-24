@@ -7,11 +7,11 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
-      # - name: linting-uses
-      #   uses: pre-commit/action@v3.0.0
-      #   with:
-      #     extra_args: --all-files
-      - name: Linting
-        run: |
-          ls -la
-          pre-commit run --all-files
+      - name: Linting-uses
+        uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files
+      # - name: Linting
+      #   run: |
+      #     ls -la
+      #     pre-commit run --all-files
