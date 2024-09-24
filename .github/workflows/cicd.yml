@@ -11,4 +11,5 @@ jobs:
         run: |
           pwd
           ls -la
-          # pre-commit run --all-files
+          pre-commit -V
+          pre-commit run --all-files
